@@ -1,0 +1,5 @@
+jupyter
+nbclient
+nbformat
+plotly
+pandas

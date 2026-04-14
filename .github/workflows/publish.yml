@@ -1,0 +1,33 @@
+name: Publish Quarto Dashboard
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - run: pip install -r requirements.txt
+
+      - uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          path: dashboard.ipynb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
