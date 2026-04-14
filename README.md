@@ -7,6 +7,7 @@ The dashboard uses the Gapminder dataset with Plotly Express to demonstrate rows
 ## Files
 
 - `dashboard.ipynb` — the dashboard notebook (exercise + working cells)
+- `_quarto.yml` — Quarto project config (needed so `quarto publish` works without extra args)
 - `requirements.txt` — Python dependencies for rendering
 - `.github/workflows/publish.yml` — CI workflow that builds and publishes to GitHub Pages
 
@@ -71,8 +72,6 @@ Your dashboard will be live at:
 ```
 https://<your-username>.github.io/<repo-name>/
 ```
-
-> **Note:** The included `publish.yml` currently sets `path: dashboard.qmd`, but the source file in this repo is `dashboard.ipynb`. Update that line to `path: dashboard.ipynb` (or remove the `path:` key to render the whole project) before your first deploy.
 
 ## Alternative deployment targets
 
