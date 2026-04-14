@@ -3,3 +3,5 @@ nbclient
 nbformat
 plotly
 pandas
+seaborn
+itables
