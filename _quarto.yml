@@ -1,5 +1,3 @@
 project:
   type: website
-  render:
-    - dashboard.ipynb
   output-dir: _site
